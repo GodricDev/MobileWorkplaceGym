@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Mobile Workplace Gym</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Style the header */
+header {
+  background-color: #ab00a9;
+  padding: 1px;
+  text-align: center;
+  font-size: 35px;
+  font-family: "Brush Script MT", "Arial Rounded MT Bold", ui-rounded, "Trebuchet MS", sans-serif;
+  font-weight: 900;
+  color: white;
+}
+
+h3, p {
+  margin: 0;
+  padding: 5px; 
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f58025;
+  margin: 0px;
+  padding: 0px;
+}
+
+.container div {
+  flex: 1 1 33%;
+  background-color: #f58025;
+  margin: 0px;
+  padding: 0px;
+  font-size: 20px;
+}
+
+.medium-label {
+ display: inline-block; /* Allows the width property to apply */
+  width:  168px;
+}
+
+.wide-label {
+ display: inline-block; /* Allows the width property to apply */
+  width:  256px;
+}
+
+/* From https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button Try it */
+.styled {
+  display: block;
+  margin: 5px auto;
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  border-radius: 10px;
+  background-color: #b0da8e;
+  background-image: linear-gradient(
+    to top left,
+    rgb(0 0 0 / 0.2),
+    rgb(0 0 0 / 0.2) 30%,
+    transparent
+  );
+  box-shadow:
+    inset 2px 2px 3px rgb(255 255 255 / 0.6),
+    inset -2px -2px 3px rgb(0 0 0 / 0.6);
+}
+
+.styled:hover {
+  background-color: #7bc143;
+}
+
+.styled:active {
+  box-shadow:
+    inset -2px -2px 3px rgb(255 255 255 / 0.6),
+    inset 2px 2px 3px rgb(0 0 0 / 0.6);
+}
+
+.readmore {
+  background-color: #eb529e;
+  margin: 0;
+  padding: 5px;
+  font-size: 20px;
+}
+
+/* Style the footer */
+footer {
+  background-color: #00a0af;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .column {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+	flex-basis: 100%; /* Makes each column take up the full width, stacking them */
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Mobile Workplace Gym</h1>
+</header>
+
+<div class="container">
+  <div>
+    <ul>
+      <li>Boost your memory, attention, and mood!</li>
+	  <li>Reduce stress</li>
+      <li>Work most of your major muscles in less than 5 minutes!</li>
+      <li>Get more toned and lean</li>
+	  <li>The gym comes to your workplace parking lot in a cooled/heated trailer</li>
+    </ul>
+	<p><a href="#more-details">See More Details</a></p>
+  </div>
+  <div>
+    <h3>How to use our strength-training machines</h3>
+    <iframe width="464" height="464" src="https://www.youtube.com/embed/0dTT5og_3bw" title="How to Use Keiser® Machines" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  <div>
+    <h3>Request a mobile gym come to your workplace</h3>
+	  <form action="https://formsubmit.co/jpgoodrich@msn.com" method="POST">
+        <label class="medium-label" for="urname">Your name:</label>
+        <input type="text" id="urname" name="urname" style="width: 300px;" required><br />
+        <label class="medium-label" for="urphone">Phone #:</label>
+        <input type="tel" id="urphone" name="urphone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required /><br />
+		<label class="medium-label" for="company">Company Name:</label>
+        <input type="text" id="company" name="company" style="width: 300px;"><br />
+		<label class="medium-label" for="address">Company Address:</label>
+        <input type="text" id="address" name="address" style="width: 415px;"><br />
+		<label for="count">How many people at your location are interested?</label>
+		<input type="number" id="count" name="count" style="width: 50px;" min="1" required /><br /><br />
+		<p>Do you have the authority to allow employees to leave their work station for a short workout?</p>
+		<input type="radio" id="yes" name="authorized" value="Yes" required>
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="authorized" value="No">
+        <label for="No">No</label><br />
+		<p>If you do not have this authority, please submit who does:</p>
+		<label class="wide-label" for="aname">Authorized person's name:</label>
+		<input type="text" id="aname" name="aname" style="width: 300px;"><br />
+		<label class="wide-label" for="atitle">Authorized person's title:</label>
+		<input type="text" id="atitle" name="atitle" style="width: 300px;"><br />
+        <label class="wide-label" for="aphone">Authorized person's Phone #:</label>
+        <input type="tel" id="aphone" name="aphone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" /><br /><br />
+		<p>Preferred days of the week:</p>
+		 <input type="checkbox" id="mon" name="mon" value="Mon">
+         <label for="mon">Mon</label>
+         <input type="checkbox" id="tue" name="tue" value="Tues">
+         <label for="tue">Tue</label>
+         <input type="checkbox" id="wed" name="wed" value="Wed">
+         <label for="wed">Wed</label>
+		 <input type="checkbox" id="thu" name="thu" value="Thu">
+         <label for="thu">Thu</label>
+         <input type="checkbox" id="fri" name="fri" value="Fri">
+         <label for="fri">Fri</label>
+         <input type="checkbox" id="sat" name="sat" value="Sat">
+         <label for="sat">Sat</label>
+		 <input type="checkbox" id="sun" name="sun" value="Sun">
+         <label for="sun">Sun</label><br />
+		 <label class="wide-label" for="times">Preferred times of day:</label>
+        <input type="text" id="times" name="times" style="width: 300px;"><br />
+		<button class="favorite styled" type="submit">Submit</button>
+      </form> 
+  </div>
+</div>
+<div class="readmore">
+  <h3 id="more-details">More Details</h3>
+  <!-- Scribbr Citation Generator was used to cite webpages https://www.scribbr.com/citation/generator/folders/7BD9hlDWNNErmlGaBlDAt0/lists/3Io8WFhEc6lCPMebWZJS2c/, 
+       along with https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/cite -->
+  <ul>
+    <li>A recent study showed that resistance training was the most effective at boosting memory and attention, compared to aerobic exercise, high-intensity intervals, and mind–body practices like Tai Chi and yoga.  Resistance training has also been proven to be a great mood booster.  McMillan, M. (n.d.). <cite><a target="_blank" href="https://www.outsideonline.com/health/training-performance/strength-training-benefits-seniors/">Strength training boosts brain health, according to new study.</a></cite> Outside.</li>
+    <li>Strength training twice a week dramatically reduces anxiety and stress HADEN, J. (2022, May 13). <cite><a target="_blank" href=" https://www.inc.com/jeff-haden/science-says-strength-training-twice-a-week-dramatically-reduces-anxiety-stress.html">Science Says Strength Training Twice a Week Dramatically Reduces Anxiety and Stress.</a></cite> www.inc.com.</li>
+    <li>Three strength-training resistance machines work most of your major muscles in a short, simple workout routine:
+	  <ul>
+	    <li><a target="_blank" href="https://www.keiser.com/fitness-equipment/strength-training/a300-leg-press">The Keiser<sup>&reg;</sup> Leg Press:</a>&nbsp;&nbsp;quadriceps, glutes, calves</li>
+	    <li><a target="_blank" href="https://www.keiser.com/fitness-equipment/strength-training/a300-biaxial-chest-press">The Keiser<sup>&reg;</sup> Chest Press:</a>&nbsp;&nbsp;pectorals, anterior deltoids, triceps</li>
+	    <li><a target="_blank" href="https://www.keiser.com/fitness-equipment/strength-training/a300-upper-back-model-2021">The Keiser<sup>&reg;</sup> Upper Back:</a>&nbsp;&nbsp;latissimus dorsi, posterior deltoids, biceps</li>
+	  </ul>
+	</li>
+	<li>Performing three different exercises back-to-back with minimal (e.g., 10 seconds or less) or no rest keeps the heart rate elevated, significantly increasing caloric expenditure.  This also improves muscular endurance and cardiovascular performance. Satzuma-Creative. (2024, February 6). <cite><a target="_blank" href="https://www.energise.fit/tri-set-strength-training/">Tri-set strength training.</a></cite> Energise Fitness.</li>
+    <li>One set of fifteen to twenty repetitions on three machines with minimal or no rest between means the entire workout can be performed in two to five minutes.</li>
+    <li>Spending one to two hours at the gym three or four days a week may be beneficial for training for competition in bodybuilding, powerlifting, or some sports, but most people do not need to put in that much effort to be more toned and lean.</li>
+	<li>Only one set of fifteen to twenty repetitions are needed to build a lean, toned physique (Schoenfeld, Brad, 2003, pp. 48-49.  Look Great At Any Age.  Prentice Hall Press).</li>
+	<li>Two workouts per week are enough to gain benefits and prevent burnout and injury. Rock Solid Fitness. (2024, July 5). <cite><a target="_blank" href="https://www.rocksolidfitnessfl.com/twice-a-week-strength-training/">Twice a Week is Enough: The Research Behind Optimal Strength Training Frequency</a></cite> Rock Solid Fitness.</li>
+	<li>After a full and possibly stressful workday, it can be difficult to find the mental and physical energy to work out.  Especially if you have children to take to sports or other after-school activities, provide dinner for, make sure homework is done, remind them to shower, and have them in bed in time for a good night’s rest.  A quick workout during a short break at work solves this time issue.</li>
+	<li>Employees are more likely to work out if the gym comes to them on a routine schedule, rather than finding time to go to a gym or take the time to exercise at home.</li>
+	<li>Resistance training may assist prevention and management of type 2 diabetes, enhance cardiovascular health, promote bone development, be effective for reducing low back pain and easing discomfort associated with arthritis and fibromyalgia, and reverse specific aging factors in skeletal muscle. L Westcott, W. (2012, August 11).  <cite><a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/22777332/">Resistance training is medicine: effects of strength training on health.</a></cite> PubMed.</li>
+	<li>Strength training can also benefit older adults by maintaining muscle mass, preventing frailty and improving mobility and independence. National Institute on Aging. (2022, September 22).  <cite><a target="_blank" href="https://www.nia.nih.gov/news/how-can-strength-training-build-healthier-bodies-we-age">How can strength training build healthier bodies as we age?</a></cite> National Institute on Aging.</li>
+  </ul>
+</div>
+
+<footer>
+  <small>
+    Copyright © 2026 Mobile Workplace Gym. All Rights Reserved.
+  </small>
+</footer>
+
+</body>
+</html>
