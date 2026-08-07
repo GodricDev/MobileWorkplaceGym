@@ -29,17 +29,39 @@ h3, p {
 .container {
   display: flex;
   flex-wrap: wrap;
-  background-color: #f58025;
   margin: 0px;
   padding: 0px;
 }
 
 .container div {
   flex: 1 1 33%;
-  background-color: #f58025;
+  background-color: #ffffff;
   margin: 0px;
   padding: 0px;
   font-size: 20px;
+}
+
+/* 1. Flex container alignment */
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* 2. Card sizing within the flex layout */
+.video-card {
+  flex: 1; /* Allows the card to grow and shrink */
+  min-width: 300px; /* Prevents the video from getting too small */
+  max-width: 800px; /* Prevents the video from getting too large */
+}
+
+/* 3. Modern aspect ratio scaling */
+.video-card iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Automatically calculates correct height */
+  border: none;
 }
 
 .medium-label {
@@ -64,7 +86,7 @@ h3, p {
   color: white;
   text-shadow: 1px 1px 1px black;
   border-radius: 10px;
-  background-color: #b0da8e;
+  background-color: #db4f99;
   background-image: linear-gradient(
     to top left,
     rgb(0 0 0 / 0.2),
@@ -87,15 +109,20 @@ h3, p {
 }
 
 .readmore {
-  background-color: #eb529e;
+  background-color: #00056d;
+  color: #ffffff;
   margin: 0;
   padding: 5px;
   font-size: 20px;
 }
 
+.readmore a {
+  color: #ffffff;
+}
+
 /* Style the footer */
 footer {
-  background-color: #00a0af;
+  background-color: #00ccff;
   padding: 5px;
   text-align: center;
 }
@@ -127,9 +154,11 @@ footer {
     </ul>
 	<p><a href="#more-details">See More Details</a></p>
   </div>
-  <div>
-    <h3>How to use our strength-training machines</h3>
-    <iframe width="464" height="825" src="https://www.youtube.com/embed/cmXv4LA2Cxw" title="How to Use Keiser® Machines" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <div class="flex-container">
+    <div class="video-card">
+      <h3>How to use our strength-training machines</h3>
+      <iframe width="464" height="825" src="https://www.youtube.com/embed/cmXv4LA2Cxw" title="How to Use Keiser® Machines" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	</div>
   </div>
   <div>
     <h3>Request a mobile gym come to your workplace</h3>
@@ -198,6 +227,9 @@ footer {
 	<li>Only one set of fifteen to twenty repetitions are needed to build a lean, toned physique.<a href="#7"><sup>7</sup></a></li>
 	<li>Two workouts per week are enough to gain benefits and prevent burnout and injury.<a href="#8"><sup>8</sup></a></li>
 	<li>Employees are more likely to work out if the gym comes to them on a routine schedule, rather than finding time to go to a gym or take the time to exercise at home.</li>
+	<li>Progress towards a more lean body composition is contingent on NOT increasing your total daily consumption of calories while participating in this program.</li>
+	<li>Progress on toning muscle is dependent on consistency and maintaining a somewhat challenging intensity over time.</li>
+	<li>This program is intended for participants to start off slow and increase intensity after a few consecutive workouts, rather than trying to work hard to get fit sooner than possible, and becoming too sore and/or burned out to continue.</li>
 	<li>Resistance training may assist prevention and management of type 2 diabetes, enhance cardiovascular health, promote bone development, be effective for reducing low back pain and easing discomfort associated with arthritis and fibromyalgia, and reverse specific aging factors in skeletal muscle.<a href="#9"><sup>9</sup></a></li>
 	<li>Strength training can also benefit older adults by maintaining muscle mass, preventing frailty and improving mobility and independence.<a href="#10"><sup>10</sup></a></li>
   </ul>
@@ -219,7 +251,7 @@ footer {
 
 <footer>
   <small>
-    Copyright © 2026 Mobile Workplace Gym. All Rights Reserved.  Hosting by GitHub Pages.
+    Copyright © 2026 Mobile Workplace Gym. All Rights Reserved.  Hosting by © GitHub Pages.
   </small>
 </footer>
 
