@@ -31,7 +31,6 @@ h3, p {
   flex-wrap: wrap;
   margin: 0px;
   padding: 0px;
-  min-width: 300px;
 }
 
 .container div {
@@ -44,6 +43,10 @@ h3, p {
   font-size: 20px;
 }
 
+.min-width {
+  min-width: 305px;
+}
+	
 /* 1. Flex container alignment */
 .flex-container {
   display: flex;
@@ -142,12 +145,12 @@ footer {
 </head>
 <body>
 <!-- Change to force deployment 2026-08-09 6:18 pm -->
-<header>
+<header class="min-width">
   <h1>Mobile Workplace Gym</h1>
 </header>
 
 <div class="container">
-  <div>
+  <div class="min-width">
     <ul>
       <li>Boost your memory, attention, and mood!</li>
 	  <li>Reduce stress</li>
@@ -163,7 +166,7 @@ footer {
       <iframe width="464" height="824" src="https://www.youtube.com/embed/N8J86Ii9w9k" title="How to Use 3 Keiser® Machines" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 	</div>
   </div>
-  <div>
+  <div class="min-width">
     <h3>Request a mobile gym come to your workplace</h3>
 	  <form action="https://formsubmit.co/jpgoodrich@msn.com" method="POST">
         <label class="medium-label" for="urname">Your name:</label>
@@ -209,7 +212,7 @@ footer {
       </form> 
   </div>
 </div>
-<div  class="readmore">
+<div class="readmore min-width">
   <h3 id="more-details">More Details</h3>
   <!-- Scribbr Citation Generator was used to cite webpages https://www.scribbr.com/citation/generator/folders/7BD9hlDWNNErmlGaBlDAt0/lists/3Io8WFhEc6lCPMebWZJS2c/, 
        along with https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/cite -->
