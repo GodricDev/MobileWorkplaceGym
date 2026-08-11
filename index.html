@@ -48,6 +48,11 @@ h3, p {
   min-width: 350px;
   padding: 10px;
 }
+
+.extra-padding {
+  /* top | right | bottom | left */
+  padding: 0 10px 0 0;
+}
 	
 /* 1. Flex container alignment */
 .flex-container {
@@ -55,8 +60,7 @@ h3, p {
   justify-content: center;
   align-items: center;
   gap: 0px;
-  /* top | right | bottom | left */
-  padding: 0 0 0 10px;
+  padding: 0;
 }
 
 /* 2. Card sizing within the flex layout */
@@ -151,7 +155,7 @@ footer {
 </header>
 
 <div class="container">
-  <div class="min-width">
+  <div class="min-width extra-padding">
     <ul>
       <li>Boost your memory, attention, and mood!</li>
 	  <li>Reduce stress</li>
